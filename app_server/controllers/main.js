@@ -1,5 +1,5 @@
 const homepageController = (req, res) => {
-    res.render('index', { title: 'Mi Primer Express' });
+    res.render('index', { title: 'Mi Segundo Express' });
   }
 
   module.exports =  {
