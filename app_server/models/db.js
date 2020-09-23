@@ -63,6 +63,7 @@ mongoose.connection.on('disconnected', () => {
 });
 
 //MONITOREO DB2 =================================
+  
 
 // DB conectada
 logDB.on('connected', () => {
