@@ -1,7 +1,15 @@
 const mongoose = require('mongoose');
 
 //Localhost debería de cambiar por el servidor en el que está la base de datos
-const dbURI = 'mongodb://localhost/bigpizzadb';
+
+//const dbURI = 'mongodb://localhost/bigpizzadb';
+let dbURI = 'mongodb://localhost/bigpizzadb';
+if (process.env.NODE_ENV === 'production') {
+ dbURI = process.env.MONGODB_URI;
+} 
+ 
+
+
 mongoose.connect(dbURI, { useNewUrlParser: true });
 
 //MULTIPLE DATA BASE
