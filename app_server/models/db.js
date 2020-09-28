@@ -85,3 +85,4 @@ logDB.on('disconnected', () => {
 
 
 require('./locations');
+require('./esquema1');
