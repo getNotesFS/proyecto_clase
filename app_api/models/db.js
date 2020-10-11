@@ -92,5 +92,5 @@ logDB.on('disconnected', () => {
 // });
 
 
-require('./locations');
+//require('./locations');
 require('./esquema1');

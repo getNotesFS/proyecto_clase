@@ -2,7 +2,17 @@
 
 /*GET -> Mi Homepage*/
 const homeList = (req, res) => {
-  res.render('index', { title: 'Mi Página de Inicio' });
+  res.render('index', { 
+    title: 'Mi Página de Inicio',
+    nombre: 'Sebastian',
+    apellido: 'Mármol',
+    direccion: 'Calle Guayaquil, Tumbaco',
+    edad: '22',
+    telefono: '0923456789',
+    materias: 'Web 3, Taller de Investigación',
+    fecha: '5 de octubre deñ 2020'
+  
+  });
 }
 
 /*GET -> Location Information*/
