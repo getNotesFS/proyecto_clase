@@ -93,4 +93,25 @@ logDB.on('disconnected', () => {
 
 
 //require('./locations');
-require('./esquema1');
+//require('./esquema1');
+
+
+require('./Ingredientes');
+require('./Pizza');
+require('./OtroProducto'); 
+require('./Usuario');
+
+require('./CantidadPizzas');
+
+require('./CantidadOtrosProductos');
+
+require('./DetallesOrden');
+
+require('./Pedido');
+
+require('./HistorialPedidos');
+ 
+
+
+
+

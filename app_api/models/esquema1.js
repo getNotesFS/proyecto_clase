@@ -36,6 +36,8 @@ const usuariosSchema = new mongoose.Schema({ // definicion del esquema
 });
 
 const Usuario = new mongoose.model('user', usuariosSchema); // compilar el esquema en el modelo
+
+
 const user = new Usuario({
     nombre: 'Bridge',
     apellido: 'Parker JHONSON',
@@ -44,8 +46,10 @@ const user = new Usuario({
     edad: 10,
     materias: {
         tipo: 'Virtual',
-        nombres: ['Desarrollo web 1', 'Desarrollo web 2', 'Desarrollo web 3']
+        nombres: ['Desarrollo web 1', 'Desarrollo web 2', 'Desarrollo web 4']
     }
 }); // crear el documento
+
+
 
 user.save(); // guardar en DB

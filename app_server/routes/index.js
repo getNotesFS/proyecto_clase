@@ -17,7 +17,17 @@ router.get('/', ctrlLocations.homeList);
 router.get('/location', ctrlLocations.locationInfo);
 router.get('/location/review/new', ctrlLocations.addReview);
 
+//RUTA AL LISTADO
+/* GET User Info. */
+
+router.get('/pizzas/:pizzaid', ctrlLocations.pizzaList); //modificado para usar la API REST
+
+router.post('/pizza/new',ctrlLocations.addNewPizza);
+
 /*2.- About*/
 router.get('/about', ctrlOthers.about);
 
 module.exports = router;
+
+ 
+

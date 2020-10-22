@@ -1,6 +1,11 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+
+  - if (error == "val")
+    .alert.alert-danger(role="alert") Todos los campos deven estar llenos!  
+  //.alert.alert-danger.alert-dismissable.fade.show
+    a.close(href='#' data-dismiss='alert' aria-label='close') &times;
+    strong #{error}:
+    strong #{codigo}
+    |  #{mensaje}
