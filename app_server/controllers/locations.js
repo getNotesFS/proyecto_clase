@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 */
 
 // Definir las URLs para los ambientes de desarrollo y producción
-/*
+
 const apiOptions = {
   server: "http://localhost:3000", //servidor local - desarrollo
 };
@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === "production") {
        apiOptions.server = "https://proyecto-clase-web3.herokuapp.com/"; //servidor remoto - producción
 }
 
-*
+
 /*GET -> Mi Homepage*/
 const homeList = (req, res) => {
   res.render("index", {
