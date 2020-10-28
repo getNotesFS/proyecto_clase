@@ -20,17 +20,17 @@ if (process.env.NODE_ENV === "production") {
 
 /*GET -> Mi Homepage*/
 const homeList = (req, res) => {
-  res.render("new_pizza", {
+  res.render("index", {
     title: "Add New Pizza",
     error: req.query.err,
-    /*nombre: "Pizza Criolla",
+    nombre: "Pizza Criolla",
     descripcion: "Descipcion de la pizza",
     categoria: "no vegana",
     tipomasa: "true",
     tamanio: "Grande",
     precio: "22",
     imagen: "pizza_criolla_img",
-    ingredientes: "5f84ac2280986513c4e7d193",*/
+    ingredientes: "5f84ac2280986513c4e7d193",
   });
 };
 
@@ -134,9 +134,14 @@ const addNewPizza = (req, res) => {
     console.log("No hay objeto Nombre");
   } else {
     request(requestOptions, (err, { statusCode }, { name }, body) => {
-      if (statusCode === 201) {
-        res.redirect("/");
+      if (statusCode === 201) { //HTTP response status 201 : Creado exitoso
+       /* res.redirect("/pizza/new");*/
         console.log("Ha recibido");
+        res.render('new_pizza', {
+          title: 'Add New Pizza',
+          mensaje: 'Se ha agrergado un nuevo producto'
+      })
+
       } else if (statusCode === 400 && name && name === "ValidationError") {
         res.redirect("/?err=val");
         //FORMATO DEBE SER ASÍ SI EL ADD NEW ESTÁ EN UN PATH INDEPENDIENTE
@@ -147,6 +152,15 @@ const addNewPizza = (req, res) => {
       }
     });
   }
+};
+
+
+/*GET -> IMPRIME FORMULARIO*/
+const NewPizzaView =  (req, res) => {
+  res.render("new_pizza", {
+    title: "Add New Pizza",
+    error: req.query.err, 
+  });
 };
 
 /*GET -> Location Information*/
@@ -168,4 +182,5 @@ module.exports = {
   locationInfo,
   addReview,
   addNewPizza,
+  NewPizzaView
 };

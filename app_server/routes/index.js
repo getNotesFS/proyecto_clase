@@ -22,7 +22,10 @@ router.get('/location/review/new', ctrlLocations.addReview);
 
 router.get('/pizzas/:pizzaid', ctrlLocations.pizzaList); //modificado para usar la API REST
 
+//FORM HERE
 router.post('/pizza/new',ctrlLocations.addNewPizza);
+router.get('/pizza/new',ctrlLocations.NewPizzaView);
+  
 
 /*2.- About*/
 router.get('/about', ctrlOthers.about);

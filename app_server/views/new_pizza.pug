@@ -9,6 +9,7 @@ block content
         .col-md-6
           br
           h1=title
+          p #{mensaje}
           - if (error == "val")
             .alert.alert-danger.alert-dismissible.fade.show(role='alert')
               strong Error!
@@ -16,7 +17,7 @@ block content
               button.close(type='button' data-dismiss='alert' aria-label='Close')
                 span(aria-hidden='true') &times; 
           br
-          form(method='POST' action='/pizza/new' role="form")
+          form(method='POST' action='' role="form")
                    
             .form-group
               label(for='nombre') Nombre
@@ -50,6 +51,10 @@ block content
             .form-group
               label(for='imagen') Imagen
               input.form-control(type='text' name='imagen' required='')
+            .form-group
+              label(for='imagenSubir') Imagen Subir
+              br
+              input.form-control(type='file' name='imagenSubir' )
             .form-group
               label(for='ingredientes') Ingredientes
               select.form-control(multiple='' name='ingredientes')
