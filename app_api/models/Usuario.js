@@ -54,7 +54,7 @@ const usuario = new Usuario({
 });
 
 
-//usuario.save(); // guardar en DB
+usuario.save(); // guardar en DB
 
 
 module.exports = Usuario;
