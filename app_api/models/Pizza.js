@@ -36,7 +36,7 @@ const pizza = new Pizza({
 
 
 
-pizza.save(); // guardar en DB
+//pizza.save(); // guardar en DB
 
  
 module.exports = Pizza;
